@@ -31,12 +31,15 @@ gem 'unicorn'
 
 gem 'haml-rails'
 
+gem 'devise'
+
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
 group :test do
 
   gem 'cucumber-rails', require: false
+  gem 'database_cleaner', require: false
 
 end
 
@@ -51,6 +54,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 
 end
 
