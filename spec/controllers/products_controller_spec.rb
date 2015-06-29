@@ -20,6 +20,11 @@ require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
 
+  before(:each) do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    sign_in create(:user)
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Product. As you add validations to Product, be sure to
   # adjust the attributes here as well.
