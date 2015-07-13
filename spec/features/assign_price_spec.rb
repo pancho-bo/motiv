@@ -1,19 +1,22 @@
+require 'rails_helper'
+require 'support/warden'
+
 feature 'assign prices' do
 
   background do
-    create(:user)
+    login_as create(:user), scope: :user
   end
 
-  let(:product){FactoryGirl.create(:product)}
+ # let(:product){FactoryGirl.create(:product)}
 
   before do
-# Authentication
-    visit root_path
-    fill_in 'Email', with: 'admin@ex.com'
-    fill_in 'Password', with: '12345678000'
-    click_button 'Log in'
+    product = create(:product)
+#    visit root_path
+    visit products_path
+    save_and_open_page
 
-#    click_link 'Products'
+#    print product.name
+    
     click_link product.name
     click_link 'Assign price'
   end

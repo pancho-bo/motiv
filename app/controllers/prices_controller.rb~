@@ -1,0 +1,6 @@
+class PricesController < ApplicationController
+
+  def new
+    @price = @product.prices.build
+  end
+end
