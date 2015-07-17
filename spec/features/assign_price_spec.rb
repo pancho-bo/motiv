@@ -13,18 +13,18 @@ feature 'assign prices' do
     product = create(:product)
 #    visit root_path
     visit products_path
-    save_and_open_page
 
 #    print product.name
     
     click_link product.name
     click_link 'Assign price'
+    save_and_open_page
   end
 
   scenario "assign prices" do 
     fill_in 'Price', with: '120'
-    fill_in 'Start Date', with: '01/01/2015'
-    fill_in 'End Date', with: '01/12/2015'
+    fill_in 'price_start_date', with: '01/01/2015'
+    fill_in 'price_end_date', with: '01/12/2015'
     click_button 'Assign'
 
     expect(page).to have_content('Price assigned')
@@ -32,13 +32,13 @@ feature 'assign prices' do
 
   scenario "intersection prices" do 
     fill_in 'Price', with: '120'
-    fill_in 'Start Date', with: '01/01/2015'
-    fill_in 'End Date', with: '01/12/2015'
+    fill_in 'price_start_date', with: '01/01/2015'
+    fill_in 'price_end_date', with: '01/12/2015'
     click_button 'Assign'
     click_link 'Assign price'
     fill_in 'Price', with: '120'
-    fill_in 'Start Date', with: '01/06/2015'
-    fill_in 'End Date', with: '01/12/2015'
+    fill_in 'price_start_date', with: '01/01/2015'
+    fill_in 'price_end_date', with: '01/12/2015'
     click_button 'Assign'
 
     expect(page).to have_content('Intersection of price')
@@ -50,6 +50,15 @@ feature 'assign prices' do
     expect(page).to have_content("Price can't be blank")
   end
 
+  scenario "assign price with bad price" do 
+    fill_in 'Price', with: 'bla-bla'
+    fill_in 'price_start_date', with: '01/01/2015'
+    fill_in 'price_end_date', with: '01/12/2015'
+    click_button 'Assign'
+
+    expect(page).to have_content("Price is not a number")
+  end
+
   scenario "assign price without start date" do 
     fill_in 'Price', with: '120'
     click_button 'Assign'
@@ -59,7 +68,7 @@ feature 'assign prices' do
 
   scenario "assign price without end date" do 
     fill_in 'Price', with: '120'
-    fill_in 'Start Date', with: '01/01/2015'
+    fill_in 'price_start_date', with: '01/01/2015'
     click_button 'Assign'
 
     expect(page).to have_content("End date can't be blank")
