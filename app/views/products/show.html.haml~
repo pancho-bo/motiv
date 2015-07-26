@@ -4,6 +4,8 @@
   %b Name:
   = @product.name
 
+= link_to 'Assign price', new_product_price_path(@product)
+\|
 = link_to 'Edit', edit_product_path(@product)
 \|
 = link_to 'Back', products_path

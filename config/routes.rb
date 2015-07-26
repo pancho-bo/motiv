@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :products do
     resources :prices
+    resources :sales
   end 
 
   devise_for :users

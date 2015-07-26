@@ -13,7 +13,7 @@ feature 'add sale' do
 
   scenario "sale from product page" do
     visit products_path
-    click_link 'Soap'
+    click_link product.name
     click_link 'Sale'
     
     fill_in 'Quantity', with: '1'
