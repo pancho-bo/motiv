@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 *~
+
+/.sass-cache
+/public/assets

@@ -33,6 +33,9 @@ gem 'haml-rails'
 
 gem 'devise'
 
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
