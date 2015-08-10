@@ -6,8 +6,8 @@
         - @product.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .form-group
     = f.label :name
-    = f.text_area :name
-  .actions
-    = f.submit 'Save'
+    = f.text_field :name
+  .form-group
+    = f.submit 'Save', class: 'btn btn-default'
