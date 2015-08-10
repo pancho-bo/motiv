@@ -50,6 +50,7 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    cancan (1.6.10)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
   byebug
+  cancan
   capistrano-rails
   coffee-rails (~> 4.1.0)
   cucumber-rails

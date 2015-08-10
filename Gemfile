@@ -32,6 +32,7 @@ gem 'unicorn'
 gem 'haml-rails'
 
 gem 'devise'
+gem 'cancan'
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
