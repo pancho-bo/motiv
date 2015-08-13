@@ -1,0 +1,20 @@
+%nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      %a.navbar-brand{href:"/"} Project Motiv
+    - if user_signed_in?
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{href: '#'}= current_user.email
+        %li
+          = form_tag destroy_user_session_path, method: :delete, class: 'navbar-form' do
+            = submit_tag 'Sign Out', class: 'btn btn-default'
+    - else
+      = form_for @user, url: user_session_path, html: {class: 'navbar-form navbar-right'} do |f|
+        .form-group
+          = f.label :email, 'Email:', class: 'sr-only'
+          = f.email_field :email, class: 'form-control', placeholder: 'Email'
+        .form-group
+          = f.label :password, 'Password:', class: 'sr-only'
+          = f.password_field :password, class: 'form-control', placeholder: 'Password' 
+        = submit_tag 'Sign In', class: 'btn btn-default'

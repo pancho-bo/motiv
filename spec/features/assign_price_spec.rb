@@ -7,18 +7,11 @@ feature 'assign prices' do
     login_as create(:user), scope: :user
   end
 
- # let(:product){FactoryGirl.create(:product)}
-
   before do
     product = create(:product)
-#    visit root_path
     visit products_path
-
-#    print product.name
-    
     click_link product.name
     click_link 'Assign price'
-    save_and_open_page
   end
 
   scenario "assign prices" do 

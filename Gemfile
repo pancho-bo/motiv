@@ -32,6 +32,10 @@ gem 'unicorn'
 gem 'haml-rails'
 
 gem 'devise'
+gem 'cancan'
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
@@ -40,6 +44,7 @@ group :test do
 
   gem 'cucumber-rails', require: false
   gem 'database_cleaner', require: false
+  gem 'launchy'
 
 end
 

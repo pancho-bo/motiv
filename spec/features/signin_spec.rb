@@ -7,9 +7,11 @@ feature "Signing in" do
 
   scenario "Signing in with correct credentials" do
     visit root_path
-    fill_in 'Email', with: 'admin@ex.com'
-    fill_in 'Password', with: '12345678'
-    click_button 'Log in'
+    within '.navbar' do
+      fill_in 'Email', with: 'admin@ex.com'
+      fill_in 'Password', with: '12345678'
+    end
+    click_button 'Sign In'
     expect(page).to have_content 'Signed in successfully'
   end
 end
