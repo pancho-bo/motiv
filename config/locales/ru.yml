@@ -8,8 +8,17 @@ ru:
       title: "Новый продукт"
     show:
       title: "Информация о продукте"
+      assign_price: "Добавить цену"
     edit:
       title: "Редактировать продукт"
+  sales:
+    new:
+      title: "Новая продажа"
+    sale:
+      select_product: "Выберите продукт"
+  prices:
+    new:
+      title: "Новая цена"
   activerecord:
     models:
       product: "Продукт"
@@ -32,5 +41,7 @@ ru:
     destroy: "Удалить"
     save: "Сохранить"
     back: "Назад"
+    sell: "Продать"
+    assign: "Добавить"
   column_actions: "Действия"
 

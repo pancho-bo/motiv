@@ -29,8 +29,17 @@ en:
       title: "New Product"
     show:
       title: "Show Product"
+      assign_price: "Assign Price"
     edit:
       title: "Editing Product"
+  sales:
+    new:
+      title: "New Sale"
+    sale:
+      select_product: "Select Product"
+  prices:
+    new:
+      title: "New Price"
   column_name: "Name"
   column_actions: "Actions"
   btn:
@@ -39,3 +48,5 @@ en:
      destroy: "Destroy"
      save: "Save"
      back: "Back"
+     sell: "Sell"
+     assign: "Assign"

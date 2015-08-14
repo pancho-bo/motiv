@@ -8,7 +8,7 @@
 
   .form-group
     = f.label :product
-    = f.collection_select :product_id, @products, :id, :name, prompt: 'Select product'
+    = f.collection_select :product_id, @products, :id, :name, prompt: t('.select_product')
   .form-group
     = f.label :quantity
     = f.text_field :quantity
@@ -16,4 +16,4 @@
     = f.label :date
     = f.date_field :date
   .form-group
-    = f.submit 'Sell', class: 'btn btn-default'
+    = f.submit t('btn.sell'), class: 'btn btn-default'
