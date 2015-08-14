@@ -20,4 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  products:
+    index:
+      title: "Listing Products"
+      new_product: "New Product"
+      new_sale: "New Sale"
+    new:
+      title: "New Product"
+    show:
+      title: "Show Product"
+    edit:
+      title: "Editing Product"
+  column_name: "Name"
+  column_actions: "Actions"
+  btn:
+     show: "Show"
+     edit: "Edit"
+     destroy: "Destroy"
+     save: "Save"
+     back: "Back"

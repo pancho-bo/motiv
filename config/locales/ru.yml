@@ -1,0 +1,36 @@
+ru:
+  products:
+    index:
+      title: "Список продуктов"
+      new_product: "Новый продукт"
+      new_sale: "Новая продажа"
+    new:
+      title: "Новый продукт"
+    show:
+      title: "Информация о продукте"
+    edit:
+      title: "Редактировать продукт"
+  activerecord:
+    models:
+      product: "Продукт"
+      sale: "Продажа"
+      price: "Цена"
+    attributes:
+      product:
+        name: "Наименование"
+      price:
+        price: "Цена"
+        start_date: "Дата начала"
+        end_date: "Дата конца"
+      sale:
+        product: "Продукт"
+        quantity: "Количество"
+        date: "Дата"
+  btn:
+    show: "Подробнее"
+    edit: "Изменить"
+    destroy: "Удалить"
+    save: "Сохранить"
+    back: "Назад"
+  column_actions: "Действия"
+

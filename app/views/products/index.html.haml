@@ -1,21 +1,21 @@
-%h1 Listing products
+%h1= t('.title')
 
 %table.table
   %thead
     %tr
-      %th Name
-      %th Actions
+      %th= Product.human_attribute_name(:name)
+      %th= t(:column_actions)
 
   %tbody
     - @products.each do |product|
       %tr
         %td= link_to product.name, product
         %td
-          = link_to 'Show', product, class: 'btn btn-default btn-xs'
-          = link_to 'Edit', edit_product_path(product), class: 'btn btn-default btn-xs'
-          = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-default btn-xs'
+          = link_to t('btn.show'), product, class: 'btn btn-default btn-xs'
+          = link_to t('btn.edit'), edit_product_path(product), class: 'btn btn-default btn-xs'
+          = link_to t('btn.destroy'), product, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-default btn-xs'
 
 %br
 
-= link_to 'New Product', new_product_path, class: 'btn btn-default'
-= link_to 'New Sale', new_sale_path, class: 'btn btn-default'
+= link_to t('.new_product'), new_product_path, class: 'btn btn-default'
+= link_to t('.new_sale'), new_sale_path, class: 'btn btn-default'

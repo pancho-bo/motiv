@@ -1,7 +1,7 @@
-%h1 Editing product
+%h1= t('.title')
 
 = render 'form'
 
-= link_to 'Show', @product
+= link_to t('btn.show'), @product
 \|
-= link_to 'Back', products_path
+= link_to t('btn.back'), products_path

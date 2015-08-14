@@ -1,13 +1,13 @@
-%p#notice= notice
-
-%p
-  %b Name:
+%h1= t('.title')
+%div
+  = label(:product, :name)
   = @product.name
 
-= link_to 'Sell', new_product_sale_path(@product)
-\|
-= link_to 'Assign price', new_product_price_path(@product)
-\|
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+%div
+  = link_to 'Sell', new_product_sale_path(@product)
+  \|
+  = link_to 'Assign price', new_product_price_path(@product)
+  \|
+  = link_to t('btn.edit'), edit_product_path(@product)
+  \|
+  = link_to t('btn.back'), products_path
