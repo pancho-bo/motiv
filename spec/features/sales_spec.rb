@@ -27,7 +27,7 @@ feature 'add sale' do
 
   scenario "sale from main page" do
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     select 'Soap', from: 'sale_product_id'
     fill_in 'Quantity', with: '1'
@@ -40,7 +40,7 @@ feature 'add sale' do
 
   scenario "sale without product" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     fill_in 'Quantity', with: '1'
     fill_in 'Date', with: '01/01/2015'
@@ -75,7 +75,7 @@ feature 'add sale' do
 
   scenario "Sale without quantity" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     select 'Soap', from: 'sale_product_id'
     fill_in 'Date', with: '01/01/2015'
@@ -86,7 +86,7 @@ feature 'add sale' do
 
   scenario "Sale with bad quantity" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     fill_in 'Quantity', with: 'bla-bla'
     fill_in 'Date', with: '01/01/2015'
@@ -109,7 +109,7 @@ feature 'add sale' do
 
   scenario "Sale with quantity less then 1" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     select 'Soap', from: 'sale_product_id'
     fill_in 'Quantity', with: '-1'
@@ -133,7 +133,7 @@ feature 'add sale' do
 
   scenario "Sale: quantity with float" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     select 'Soap', from: 'sale_product_id'
     fill_in 'Quantity', with: '1.3'
@@ -156,7 +156,7 @@ feature 'add sale' do
 
   scenario "Sale without date" do 
     visit root_path
-    click_link 'Sell'
+    click_link 'New Sale'
     
     select 'Soap', from: 'sale_product_id'
     fill_in 'Quantity', with: '1'
