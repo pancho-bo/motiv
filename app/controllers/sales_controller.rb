@@ -12,6 +12,7 @@ class SalesController < ApplicationController
   end
   
   def create
+    fill_products
     if @product.nil?
       @sale = Sale.new(sale_params)
     else 

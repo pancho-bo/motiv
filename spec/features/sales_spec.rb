@@ -80,7 +80,6 @@ feature 'add sale' do
     select 'Soap', from: 'sale_product_id'
     fill_in 'Date', with: '01/01/2015'
     click_button 'Sell'
-   save_and_open_page
 
     expect(page).to have_content("Quantity can't be blank")
   end
