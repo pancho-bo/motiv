@@ -12,11 +12,9 @@ feature 'assign prices' do
     visit products_path
     click_link product.name
     click_link 'Assign price'
-#    save_and_open_page
   end
 
   scenario "assign prices" do 
-  #  save_and_open_page
     fill_in 'Price', with: '120'
     fill_in 'price_start_date', with: '01/01/2015'
     fill_in 'price_end_date', with: '01/12/2015'

@@ -1,0 +1,21 @@
+en:
+  devise:
+    sessions:
+      new:
+        title: "Sign In"
+    registrations:
+      new:
+        title: "Sign up"
+        password_confirmation: "Password confirmation"
+    remember_me: "Remeber me"
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        password: "Password"
+        email: "Email"
+  btn:
+    sign_out: "Sign Out"
+    sign_up: "Sign up"
+    forgot_password: "Forgot your password?"

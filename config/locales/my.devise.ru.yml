@@ -1,0 +1,23 @@
+ru:
+  devise:
+    sessions:
+      new:
+        title: "Вход"
+    registrations:
+      new:
+        title: "Новый пользователь"
+        password_confirmation: "Подтверждение пароля"
+    remember_me: "Запомнить меня"
+  activerecord:
+    models:
+      user: "Пользователь"
+    attributes:
+      user:
+        password: "Пароль"
+        email: "Эл. почта"
+  btn:
+    sign_out: "Выйти"
+    sign_up: "Регистрация"
+    forgot_password: "Забыли пароль?"
+
+ 

@@ -43,5 +43,6 @@ ru:
     back: "Назад"
     sell: "Продать"
     assign: "Добавить"
+    sign_in: "Войти"
   column_actions: "Действия"
 

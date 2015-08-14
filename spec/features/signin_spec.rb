@@ -10,8 +10,8 @@ feature "Signing in" do
     within '.navbar' do
       fill_in 'Email', with: 'admin@ex.com'
       fill_in 'Password', with: '12345678'
+      click_button 'Sign In'
     end
-    click_button 'Sign In'
     expect(page).to have_content 'Signed in successfully'
   end
 end

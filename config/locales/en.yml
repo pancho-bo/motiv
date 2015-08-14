@@ -29,7 +29,7 @@ en:
       title: "New Product"
     show:
       title: "Show Product"
-      assign_price: "Assign Price"
+      assign_price: "Assign price"
     edit:
       title: "Editing Product"
   sales:
@@ -50,3 +50,4 @@ en:
      back: "Back"
      sell: "Sell"
      assign: "Assign"
+     sign_in: "Sign In"
