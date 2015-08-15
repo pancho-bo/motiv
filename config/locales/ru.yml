@@ -45,4 +45,16 @@ ru:
     assign: "Добавить"
     sign_in: "Войти"
   column_actions: "Действия"
+  notices:
+    sale: 
+      create: "Продажа успешно добавлена"
+    price:
+      create: "Цена успешно назначена"
+    product:
+      destroy: "Продукт был успешно удален"
+  alerts:
+    sale:
+      create: "Продажа не создана"
+    price:
+      create: "Цена не назначена"
 

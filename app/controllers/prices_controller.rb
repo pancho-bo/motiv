@@ -11,10 +11,10 @@ class PricesController < ApplicationController
   def create 
     @price = @product.prices.build(price_params)
     if @price.save
-      flash[:notice] = 'Price assigned'
+      flash[:notice] = t('notices.price.create')
       redirect_to [@product, @price]
     else
-      flash[:alert] = 'Price has not been assigned' 
+      flash[:alert] = t('alerts.price.create')
       render "new"
     end 
   end

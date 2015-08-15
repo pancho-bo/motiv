@@ -21,14 +21,14 @@ class SalesController < ApplicationController
     end 
     @sale.user = current_user
     if @sale.save
-      flash[:notice] = "Sale has been added"
+      flash[:notice] = t('notices.sale.create')
       if @product.nil? 
         redirect_to root_path
       else
         redirect_to @product
       end
     else
-      flash[:alert] = "Sale has not been added"
+      flash[:alert] = t('alerts.sale.create')
       render "new"
     end
   end

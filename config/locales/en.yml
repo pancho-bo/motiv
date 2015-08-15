@@ -43,11 +43,24 @@ en:
   column_name: "Name"
   column_actions: "Actions"
   btn:
-     show: "Show"
-     edit: "Edit"
-     destroy: "Destroy"
-     save: "Save"
-     back: "Back"
-     sell: "Sell"
-     assign: "Assign"
-     sign_in: "Sign In"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    save: "Save"
+    back: "Back"
+    sell: "Sell"
+    assign: "Assign"
+    sign_in: "Sign In"
+  notices:
+    sale:
+      create: "Sale has been added"
+    price:
+      create: "Price assigned"
+    product:
+      destroy: "Product was successfully destroyed."
+  alerts:
+    sale:
+      create: "Sale has not been added"
+    price:
+      create: "Price has not been assigned"
+
