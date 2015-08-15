@@ -10,6 +10,8 @@
   %body
     .container
       = render partial: 'shared/navigation'
-      .notice= notice
-      .alert= alert
+      - if notice
+        .alert.alert-success.alert-dismissible= notice
+      - if alert
+        .alert.alert-danger.alert-dismissible= alert
       = yield
