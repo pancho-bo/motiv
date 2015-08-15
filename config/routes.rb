@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :products do
     resources :prices
     resources :sales
@@ -7,6 +8,11 @@ Rails.application.routes.draw do
   resources :sales 
 
   devise_for :users
+
+  resources :users do
+    resources :sales, shallow: true
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

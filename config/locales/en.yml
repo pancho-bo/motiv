@@ -40,6 +40,9 @@ en:
   prices:
     new:
       title: "New Price"
+  users:
+     show:
+       title: "User"
   column_name: "Name"
   column_actions: "Actions"
   btn:

@@ -19,6 +19,9 @@ ru:
   prices:
     new:
       title: "Новая цена"
+  users:
+    show:
+      title: "Пользователь"
   activerecord:
     models:
       product: "Продукт"
