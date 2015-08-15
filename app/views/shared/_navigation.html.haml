@@ -2,19 +2,25 @@
   .container-fluid
     .navbar-header
       %a.navbar-brand{href:"/"} Project Motiv
-    - if user_signed_in?
-      %ul.nav.navbar-nav.navbar-right
+    %ul.nav.navbar-nav.navbar-right
+      - if user_signed_in?
         %li
           %a{href: '#'}= current_user.email
         %li
           = form_tag destroy_user_session_path, method: :delete, class: 'navbar-form' do
             = submit_tag t('btn.sign_out'), class: 'btn btn-default'
-    - else
-      = form_for @user, url: user_session_path, html: {class: 'navbar-form navbar-right'} do |f|
-        .form-group
-          = f.label :email, class: 'sr-only'
-          = f.email_field :email, class: 'form-control', placeholder: t('activerecord.attributes.user.email')
-        .form-group
-          = f.label :password, class: 'sr-only'
-          = f.password_field :password, class: 'form-control', placeholder: t('activerecord.attributes.user.password') 
-        = submit_tag t('btn.sign_in'), class: 'btn btn-default'
+      - else
+        %li
+          = form_for @user, url: user_session_path, html: {class: 'navbar-form navbar-right'} do |f|
+            .form-group
+              = f.label :email, class: 'sr-only'
+              = f.email_field :email, class: 'form-control', placeholder: t('activerecord.attributes.user.email')
+            .form-group
+              = f.label :password, class: 'sr-only'
+              = f.password_field :password, class: 'form-control', placeholder: t('activerecord.attributes.user.password') 
+            = submit_tag t('btn.sign_in'), class: 'btn btn-default'
+      %li
+        - if I18n.locale == :en
+          = link_to 'Русский', locale: :ru
+        - else
+          = link_to 'English', locale: :en
