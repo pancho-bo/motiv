@@ -1,0 +1,8 @@
+%h1= t('title')
+
+%table.table
+  - @sales.each do |s|
+    %tr
+      %td= s.date
+      %td= s.quantity
+      %td= s.product

@@ -11,6 +11,12 @@ class SalesController < ApplicationController
       @sale = @product.sales.build
     end 
   end
+
+  def index
+    if params[:user_id]
+      @sales = User.find(params[:user_id]).sales
+    end
+  end
   
   def create
     fill_products
