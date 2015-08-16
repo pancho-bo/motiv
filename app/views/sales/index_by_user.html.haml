@@ -6,7 +6,7 @@
       %tr
         %th= Sale.human_attribute_name(:date)
         %th= Sale.human_attribute_name(:quantity)
-        %th= Product.human_attribute_name(:name)
+        %th= Product.model_name.human
     %tbody
       - @sales.each do |s|
         %tr
