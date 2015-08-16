@@ -1,0 +1,18 @@
+%h1= t('title')
+
+%div
+  %table.table
+    %thead
+      %tr
+        %th= Price.human_attribute_name(:start_date)
+        %th= Price.human_attribute_name(:end_date)
+        %th= Price.human_attribute_name(:price)
+    %tbody
+      - @prices.each do |p|
+        %tr
+          %td= l(p.start_date)
+          %td= l(p.end_date)
+          %td= p.price
+
+%div
+  = link_to t('btn.back'), product_path(@product)

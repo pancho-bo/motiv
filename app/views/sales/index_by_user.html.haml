@@ -1,0 +1,18 @@
+%h1= t('sales.index.title')
+
+%div
+  %table.table
+    %thead
+      %tr
+        %th= Sale.human_attribute_name(:date)
+        %th= Sale.human_attribute_name(:quantity)
+        %th= Product.human_attribute_name(:name)
+    %tbody
+      - @sales.each do |s|
+        %tr
+          %td= l(s.date)
+          %td= s.quantity
+          %td= s.product.name
+%div
+  = link_to t('btn.back'), user_path(@user)
+

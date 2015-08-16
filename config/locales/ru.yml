@@ -9,9 +9,13 @@ ru:
     show:
       title: "Информация о продукте"
       assign_price: "Добавить цену"
+      sales: "Продажи"
+      prices: "Цены"
     edit:
       title: "Редактировать продукт"
   sales:
+    index:
+      title: "Список продаж"
     new:
       title: "Новая продажа"
     sale:
@@ -19,9 +23,12 @@ ru:
   prices:
     new:
       title: "Новая цена"
+    index:
+      title: "Список цен"
   users:
     show:
       title: "Пользователь"
+      my_sales: "Мои продажи"
   activerecord:
     models:
       product: "Продукт"

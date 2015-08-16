@@ -12,10 +12,14 @@ class SalesController < ApplicationController
     end 
   end
 
-  def index
-    if params[:user_id]
-      @sales = User.find(params[:user_id]).sales
-    end
+  def index_by_user
+    @user = User.find(params[:user_id])
+    @sales = @user.sales.includes(:product)
+  end
+
+  def index_by_product
+    @product = Product.find(params[:product_id])
+    @sales = @product.sales.includes(:user)
   end
   
   def create

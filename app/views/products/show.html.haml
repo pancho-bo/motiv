@@ -5,9 +5,8 @@
 
 %div
   = link_to t('btn.sell'), new_product_sale_path(@product)
-  \|
   = link_to t('.assign_price'), new_product_price_path(@product)
-  \|
+  = link_to t('.sales'), product_sales_path(@product)
+  = link_to t('.prices'), product_prices_path(@product)
   = link_to t('btn.edit'), edit_product_path(@product)
-  \|
   = link_to t('btn.back'), products_path

@@ -1,4 +1,7 @@
 %h1= t('.title')
 
-= label :user, :email
-= @user.email
+%div
+  = label :user, :email
+  = @user.email
+%div
+  = link_to t('.my_sales'), user_sales_path(@user)

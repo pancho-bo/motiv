@@ -18,6 +18,10 @@ class PricesController < ApplicationController
       render "new"
     end 
   end
+
+  def index
+    @prices = @product.prices
+  end
   
   def show
     

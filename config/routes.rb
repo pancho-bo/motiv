@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get '/users/:user_id/sales', to: 'sales#index_by_user', as: 'user_sales'
+  get '/products/:product_id/sales', to: 'sales#index_by_product', as: 'product_sales'
+
   resources :products do
     resources :prices
     resources :sales
@@ -9,9 +12,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :users do
-    resources :sales, shallow: true
-  end
+  resources :users, only: [:show]
+
+  #resources :users do
+  #  resources :sales, shallow: true
+  #end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
