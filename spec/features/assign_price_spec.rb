@@ -17,7 +17,7 @@ feature 'assign prices' do
   scenario "assign prices" do 
     fill_in 'Price', with: '120'
     fill_in 'price_start_date', with: '01/01/2015'
-    fill_in 'price_end_date', with: '01/12/2015'
+    fill_in 'price_end_date', with: '31/12/2015'
     click_button 'Assign'
 
     expect(page).to have_content('Price assigned')

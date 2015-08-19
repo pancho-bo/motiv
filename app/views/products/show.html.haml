@@ -3,6 +3,9 @@
   = label(:product, :name)
   = @product.name
 
+  = label(:product, :current_price_is)
+  = @product.current_price ? @product.current_price : "not defined" 
+
 %div
   = link_to t('btn.sell'), new_product_sale_path(@product)
   = link_to t('.assign_price'), new_product_price_path(@product)

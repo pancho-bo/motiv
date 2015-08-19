@@ -13,4 +13,22 @@ feature "Product basic interaction" do
     click_button 'Save'
     expect(page).to have_content 'Product was successfully created'
   end
+
+  scenario "Current price" do
+
+    price = create(:price)
+    visit products_path
+    click_link 'Soap'
+
+    expect(page).to have_content 'Current price is 120'
+  end
+
+  scenario "Current price is not defined" do
+
+    price = create(:old_price)
+    visit products_path
+    click_link 'Soap'
+
+    expect(page).to have_content 'Current price is not defined'
+  end
 end
